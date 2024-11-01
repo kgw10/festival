@@ -1,0 +1,24 @@
+#footer {
+    background-color: #f1f1f1; /* 배경색 */
+    padding: 20px; /* 패딩 추가 */
+    text-align: center; /* 중앙 정렬 */
+}
+
+.foot-logo {
+    margin-bottom: 10px; /* 하단 여백 */
+}
+
+.outsite {
+    margin: 0 10px; /* 좌우 여백 추가 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: #007bff; /* 링크 색상 */
+}
+
+.outsite:hover {
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+}
+
+#address {
+    font-size: 12px; /* 작은 폰트 크기 */
+    color: #666; /* 텍스트 색상 */
+}

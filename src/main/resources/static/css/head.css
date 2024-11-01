@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#nav {
+    display: flex;  /* Flexbox를 사용하여 자식 요소를 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: space-between; /* 양쪽으로 공간을 분배 */
+    padding: 10px; /* 패딩 추가 */
+    background-color: #f8f9fa; /* 배경색 */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search {
+    margin: 0 20px; /* 좌우 여백 추가 */
+}
+
+.right-buttons {
+    display: flex; /* Flexbox를 사용하여 버튼을 가로로 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-left: auto; /* 오른쪽으로 이동 */
+}
+
+.right-buttons button {
+    margin-left: 10px; /* 버튼 간격 추가 */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* 호버 시 배경색 변경 */
+}
