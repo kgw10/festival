@@ -5,29 +5,38 @@
 }
 
 #nav {
-    display: flex;  /* Flexbox를 사용하여 자식 요소를 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    justify-content: space-between; /* 양쪽으로 공간을 분배 */
-    padding: 10px; /* 패딩 추가 */
-    background-color: #f8f9fa; /* 배경색 */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 모든 요소를 중앙 정렬 */
+    padding: 10px;
+    background-color: #f8f9fa;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
+    margin-right: 20px; /* 로고와 검색창 사이 여백 추가 */
 }
 
 .search {
-    margin: 0 20px; /* 좌우 여백 추가 */
+    flex-grow: 1; /* 검색창이 가능한 모든 공간을 차지하도록 */
+    margin: 0 20px;
+}
+
+.search input {
+    width: 100%; /* 검색창 너비를 100%로 설정 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .right-buttons {
-    display: flex; /* Flexbox를 사용하여 버튼을 가로로 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    margin-left: auto; /* 오른쪽으로 이동 */
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* 로그인 버튼과의 간격 */
 }
 
-.right-buttons button {
+.right-buttons a {
     margin-left: 10px; /* 버튼 간격 추가 */
 }
 
@@ -42,5 +51,16 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /* 호버 시 배경색 변경 */
+    background-color: #0056b3;
+}
+
+/* 추가된 버튼 그룹 스타일 */
+.button-group {
+    display: flex; /* 버튼들을 가로로 배치 */
+    justify-content: center; /* 버튼들을 중앙 정렬 */
+    margin-top: 10px; /* 버튼 그룹 위쪽 여백 */
+}
+
+.button-group button {
+    margin: 0 10px; /* 버튼 간격 추가 */
 }

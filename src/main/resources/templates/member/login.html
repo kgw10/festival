@@ -5,27 +5,41 @@
 <head>
     <meta charset="UTF-8">
     <title>로그인</title>
-    <link rel="stylesheet" href="/static/css/login.css"> <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="/css/login.css"> <!-- CSS 파일 경로 -->
 </head>
-<body>
-<div class="login-container">
-    <form action="signIn" method="post">
-        <div>
-            <label for="username">아이디:</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div>
-            <label for="password">비밀번호:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div>
-            <button type="submit">로그인</button>
-        </div>
-    </form>
 
-    <div class="links">
-        <a href="/find-credentials">아이디/비밀번호 찾기</a> |
-        <a href="/register">회원가입</a>
+<body>
+<div layout:fragment="main" id="main">
+
+    <div id="loginWrap">
+        <form method="post" action="/member/signIn" th:object="${LoginDTO}">
+            <div class="formData">
+                <div class="formTitle">로그인</div>
+                <div class="inputField">
+                    <input type="text" th:field="*{id}" id="userId" placeholder="아이디" required>
+                </div>
+                <div class="inputField">
+                    <input type="password" th:field="*{password}" id="password" placeholder="비밀번호" required>
+                </div>
+
+                <p th:if="${loginFailMsg}" th:text="${loginFailMsg}" style="color:red; padding-bottom:20px;"></p>
+
+                <div class="loginBt">
+                    <button type="submit">로그인</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="findCredentials">
+            <p>
+                <a href="/member/findInfo">아이디/비밀번호 찾기</a>
+            </p>
+        </div>
+
+        <div class="joinLink">
+            <a href="/member/signUp">회원가입</a>
+        </div>
+
     </div>
 </div>
 </body>

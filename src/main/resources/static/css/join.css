@@ -1,0 +1,82 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+#signUpWrap {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.inputField {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; /* 버튼과 입력란을 수평 정렬 */
+}
+
+.inputField input {
+    flex: 1; /* 입력란이 가능한 공간을 차지하도록 */
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.inputField button {
+    padding: 10px;
+    margin-left: 5px; /* 입력란과 버튼 간의 간격 */
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.inputField button:hover {
+    background-color: #0056b3;
+}
+
+.checkbox {
+    margin-bottom: 20px;
+}
+
+.nextButton,
+.signUpButton {
+    text-align: center;
+}
+
+.nextButton button,
+.signUpButton button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nextButton button:hover,
+.signUpButton button:hover {
+    background-color: #218838;
+}
+
+.inputField select {
+    flex: 1; /* 기존에 설정한 flex 속성 유지 */
+    padding: 10px; /* 패딩을 추가하여 크기 증가 */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px; /* 폰트 크기 조정 */
+}

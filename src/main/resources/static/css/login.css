@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#loginWrap {
+    width: 100%;
+    max-width: 400px; /* 로그인 박스의 최대 너비 설정 */
+    margin: 100px auto; /* 수직 중앙 정렬을 위한 마진 */
+    padding: 20px;
+    border: 1px solid #ccc; /* 테두리 */
+    border-radius: 5px; /* 둥근 모서리 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    background-color: #fff; /* 배경색 */
+}
+
+.formData {
+    display: flex;
+    flex-direction: column;
+}
+
+.formTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px; /* 타이틀과 입력 필드 간격 */
+    text-align: center; /* 가운데 정렬 */
+}
+
+.inputField {
+    margin-bottom: 15px; /* 입력 필드 간격 */
+}
+
+.inputField input {
+    width: 100%; /* 입력 필드 너비 100% */
+    padding: 10px; /* 패딩 */
+    border: 1px solid #ccc; /* 테두리 */
+    border-radius: 5px; /* 둥근 모서리 */
+}
+
+.loginBt {
+    text-align: center; /* 버튼 중앙 정렬 */
+}
+
+.loginBt button {
+    width: 100%; /* 버튼 너비 100% */
+    padding: 10px; /* 패딩 */
+    background-color: #007bff; /* 배경색 */
+    color: white; /* 글자색 */
+    border: none; /* 테두리 없음 */
+    border-radius: 5px; /* 둥근 모서리 */
+    cursor: pointer; /* 커서 포인터 변경 */
+    transition: background-color 0.3s; /* 배경색 전환 효과 */
+}
+
+.loginBt button:hover {
+    background-color: #0056b3; /* 호버 시 배경색 변경 */
+}
+
+.findCredentials,
+.joinLink {
+    text-align: center; /* 링크 중앙 정렬 */
+    margin-top: 10px; /* 간격 추가 */
+}
+
+.findCredentials a,
+.joinLink a {
+    color: #007bff; /* 링크 색상 */
+    text-decoration: none; /* 밑줄 없음 */
+}
+
+.findCredentials a:hover,
+.joinLink a:hover {
+    text-decoration: underline; /* 호버 시 밑줄 추가 */
+}

@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class MainControl {
 
     @GetMapping("/")
-    public String head(){
-
+    public String head() {
         return "index";
     }
-
 }

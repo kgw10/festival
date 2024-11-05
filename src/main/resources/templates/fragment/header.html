@@ -1,35 +1,39 @@
-    <!DOCTYPE html>
-    <html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- CSS 파일 경로 -->
+</head>
+<body>
+<div th:fragment="header" id="header">
+    <div id="nav">
+        <!-- 로고 -->
+        <div class="logo" onclick="location.href='/'" style="cursor: pointer;">로고</div>
 
-    <div th:fragment="header" id="header">
-        <div id="nav">
-            <!-- 로고 -->
-            <div class="logo">로고</div>
+        <!-- 검색창 -->
+        <div class="search">
+            <input type="text" name="keyword" id="keyword" placeholder="검색창">
+        </div>
 
-            <!-- 검색창 -->
-            <div class="search">
-                <input type="text" name="keyword" id="keyword" placeholder="검색창">
-            </div>
-
-            <div class="right-buttons">
-                <a href="/member/signIn" class="login-button">로그인</a>
-                <a href="/templates/mypage/mypage.html" class="login-button">마이페이지</a>
-            </div>
-
-            <!-- 축제 일정 버튼 -->
-            <div class="festival">
-                <button type="button" onclick="location.href='/festival/schedule'">축제 일정</button>
-            </div>
-
-            <!-- 다이어리 버튼 -->
-            <div class="diary">
-                <button type="button" onclick="location.href='/diary'">다이어리</button>
-            </div>
-
-            <!-- 함께가요 버튼 -->
-            <div class="together">
-                <button type="button" onclick="location.href='/together'">함께가요</button>
-            </div>
+        <div class="right-buttons">
+            <a href="/member/signIn" class="login-button">로그인</a>
+            <a href="/mypage" class="login-button">마이페이지</a>
         </div>
     </div>
-    </html>
+
+    <!-- 축제 일정, 다이어리, 함께가요 버튼 -->
+    <div class="button-group">
+        <div class="festival">
+            <button type="button" onclick="location.href='/festival/schedule'">축제 일정</button>
+        </div>
+        <div class="diary">
+            <button type="button" onclick="location.href='/diary'">다이어리</button>
+        </div>
+        <div class="together">
+            <button type="button" onclick="location.href='/together'">함께가요</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
