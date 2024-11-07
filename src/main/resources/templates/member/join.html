@@ -36,7 +36,6 @@
           <button type="button" onclick="checkDuplicateId()">중복 확인</button>
           <span id="idCheckResult"></span> <!-- 중복 여부 표시 -->
         </div>
-
         <div class="inputField">
           <input type="password" th:field="*{password}" placeholder="비밀번호" required>
         </div>
@@ -45,7 +44,7 @@
         </div>
         <div class="inputField">
           <input type="text" th:field="*{email}" placeholder="이메일" required>
-          @
+          <span>@</span>
           <select th:field="*{emailDomain}">
             <option value="naver.com">naver.com</option>
             <option value="gmail.com">gmail.com</option>

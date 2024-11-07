@@ -90,6 +90,11 @@ public class MemberController {
     // 회원가입 처리
     @PostMapping("/signUp")
     public String signUp(@ModelAttribute MemberDTO memberDTO, Model model) {
+
+        // 이메일 앞부분과 도메인 결합
+        String email = memberDTO.getEmail() + "@" + memberDTO.getEmailDomain();
+        memberDTO.setEmail(email);  // 합쳐진 이메일을 memberDTO에 설정
+
         boolean isRegistered = memberService.registerMember(memberDTO);
         if (isRegistered) {
             model.addAttribute("signUpSuccessMsg", "회원가입이 완료되었습니다.");
@@ -113,9 +118,28 @@ public class MemberController {
             model.addAttribute("isLoggedIn", false);
         }
     }
+
+
+    @GetMapping("/checkDuplicateId")
+    @ResponseBody  // JSON 응답을 보냄
+    public Map<String, Boolean> checkDuplicateId(@RequestParam("id") String id) {
+        boolean isDuplicate = memberService.isUserIdExists(id);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("isDuplicate", isDuplicate);
+        return response;  // 중복 여부 반환
+    }
+
+    // 닉네임 중복 확인 처리
+    @GetMapping("/checkDuplicateNickname")
+    @ResponseBody  // JSON 응답을 보냄
+    public Map<String, Boolean> checkDuplicateNickname(@RequestParam("nickname") String nickname) {
+        boolean isDuplicate = memberService.isNicknameExists(nickname);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("isDuplicate", isDuplicate);
+        return response;  // 중복 여부 반환
+    }
+
 }
-
-
 //    // 아이디 중복 확인 처리
 //    @GetMapping("/checkDuplicateId")
 //    @ResponseBody  // JSON 응답을 보냄

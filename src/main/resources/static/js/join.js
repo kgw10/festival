@@ -36,11 +36,9 @@ function checkDuplicateId() {
                 console.log(data.isDuplicate); // 콘솔에 중복 여부 출력
 
                 if (data.isDuplicate) {
-                    idCheckResult.textContent = "이미 사용 중인 아이디입니다.";
-                    idCheckResult.style.color = "red";
+                    alert("이미 사용 중인 아이디입니다.");
                 } else {
-                    idCheckResult.textContent = "사용 가능한 아이디입니다.";
-                    idCheckResult.style.color = "green";
+                    alert("사용 가능한 아이디입니다.")
                 }
             })
             .catch(error => {
@@ -49,6 +47,13 @@ function checkDuplicateId() {
             });
     }
 }
+    document.querySelector('form').addEventListener('submit', function() {
+        var email = document.getElementById('email').value;
+        var emailDomain = document.getElementById('emailDomain').value;
+
+        // 이메일 앞부분과 도메인을 합쳐서 email 필드에 다시 설정
+        document.getElementById('email').value = email + "@" + emailDomain;
+    });
 
 // 아이디 중복 확인
 //function checkDuplicateId() {
