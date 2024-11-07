@@ -34,7 +34,9 @@
         <div class="inputField">
           <input type="text" th:field="*{id}" placeholder="아이디" required>
           <button type="button" onclick="checkDuplicateId()">중복 확인</button>
+          <span id="idCheckResult"></span> <!-- 중복 여부 표시 -->
         </div>
+
         <div class="inputField">
           <input type="password" th:field="*{password}" placeholder="비밀번호" required>
         </div>
@@ -69,6 +71,7 @@
         <div class="inputField">
           <input type="text" th:field="*{nickname}" placeholder="닉네임" required>
           <button type="button" onclick="checkDuplicateNickname()">중복 확인</button>
+          <span id="nicknameCheckResult"></span> <!-- 중복 여부 표시 -->
         </div>
         <div class="inputField">
           <input type="number" th:field="*{age}" placeholder="나이 (0~100)" min="0" max="100" required>

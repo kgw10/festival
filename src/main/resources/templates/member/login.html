@@ -4,43 +4,44 @@
       layout:decorate="~{fragment/main}">
 <head>
     <meta charset="UTF-8">
-    <title>로그인</title>
-    <link rel="stylesheet" href="/css/login.css"> <!-- CSS 파일 경로 -->
-</head>
+    <title layout:fragment="title">로그인</title>
 
-<body>
+    <th:block layout:fragment="css">
+        <link rel="stylesheet" href="/css/login.css">
+    </th:block>
+    <th:block layout:fragment="script"></th:block>
+</head>
 <div layout:fragment="main" id="main">
 
     <div id="loginWrap">
-        <form method="post" action="/member/signIn" th:object="${LoginDTO}">
+        <form method="post" action="/member/signIn">
             <div class="formData">
                 <div class="formTitle">로그인</div>
                 <div class="inputField">
-                    <input type="text" th:field="*{id}" id="userId" placeholder="아이디" required>
+                    <input type="text" name="id" id="id" placeholder="ID" required>
                 </div>
                 <div class="inputField">
-                    <input type="password" th:field="*{password}" id="password" placeholder="비밀번호" required>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" required>
                 </div>
 
-                <p th:if="${loginFailMsg}" th:text="${loginFailMsg}" style="color:red; padding-bottom:20px;"></p>
+                <!-- 로그인 실패 메시지 출력 -->
+                <p th:if="${loginFailMsg}" th:text="${loginFailMsg}"
+                   style="color:red; padding-bottom:20px;"></p>
 
                 <div class="loginBt">
-                    <button type="submit">로그인</button>
+                    <button type="submit">Login</button>
                 </div>
             </div>
         </form>
 
-        <div class="findCredentials">
-            <p>
-                <a href="/member/findInfo">아이디/비밀번호 찾기</a>
-            </p>
+        <div class="forget">
+            <a href="/member/findInfo">아이디 찾기/비밀번호 찾기</a>
         </div>
-
         <div class="joinLink">
             <a href="/member/signUp">회원가입</a>
         </div>
 
     </div>
+
 </div>
-</body>
 </html>
