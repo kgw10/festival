@@ -56,3 +56,7 @@ function updateLoginLogoutButton() {
 
 // 페이지 로드 시 버튼 상태 초기화
 window.onload = updateLoginLogoutButton;
+
+document.addEventListener("DOMContentLoaded",function(){
+    console.log("메인화면 로딩");
+});

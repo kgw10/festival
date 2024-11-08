@@ -12,7 +12,10 @@
 
         <!-- 검색창 -->
         <div class="search">
-            <input type="text" name="keyword" id="keyword" placeholder="검색창">
+            <form method="get" action="/festival/search">
+                <input type="text" name="keyword" id="keyword" placeholder="축제 검색어 입력">
+                <button type="submit"> <i class="bi bi-search"></i> </button>
+            </form>
         </div>
 
         <!-- 로그인, 로그아웃, 마이페이지, 회원가입 버튼 -->
@@ -34,13 +37,13 @@
     <!-- 축제 일정, 다이어리, 함께가요 버튼 -->
     <div class="button-group">
         <div class="festival">
-            <button type="button" onclick="location.href='/festival/schedule'">축제 일정</button>
+            <button type="button" onclick="location.href='/festival'">축제 일정</button>
         </div>
         <div class="diary">
             <button type="button" onclick="location.href='/diary'">다이어리</button>
         </div>
         <div class="together">
-            <button type="button" onclick="location.href='/together'">함께가요</button>
+            <button type="button" onclick="location.href='/party'">함께가요</button>
         </div>
     </div>
 </div>
