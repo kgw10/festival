@@ -1,0 +1,19 @@
+/* search.css */
+#festival_list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.day_festivals{
+    width:30%;
+    margin-bottom:20px;
+}
+#load_more_bt{
+    background-color:orange;
+    border:none;
+    cursor:pointer;
+}
+#load_more_bt[disabled]{
+    background-color:gray;
+    cursor:not-allowed;
+}

@@ -1,0 +1,66 @@
+/* default.css */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+#wrap{
+    max-width : 1300px;
+    margin : 0 auto;
+}
+
+h2 {
+    color: #2d87d5;
+    text-align: center;
+}
+
+#festival-list{
+    max-width:1240px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    justify-content:center;
+}
+.festival-card{
+    max-width:400px;
+    max-height:300px;
+    padding:20px;
+    box-sizing:border-box;
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:transform 0.3s ease,box-shadow 0.3s ease;
+    display:flex;
+    flex-direction:column;
+}
+.festival-card:hover{
+    transition:translateY(-5px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    border:2px solid blue;
+}
+#fes_info{
+    display:flex;
+    width:100%;
+    gap:10px;
+}
+.fes_img{
+    width:350px;
+    height:200px;
+    margin:0 auto;
+    overflow:hidden;
+    justify-content:center;
+    border-radius:10px;
+    object-fit:cover;
+    margin-bottom:20px;
+}
+.festival-card h2 {
+    font-size: 1.2em;
+    color: #333;
+}
+.festival-card p {
+    font-size: 0.9em;
+    color: #555;
+}

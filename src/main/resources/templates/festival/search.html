@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragment/main}">
+<head>
+  <title layout:fragment="title">축제검색</title>
+  <th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/search.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+  </th:block>
+  <th:block layout:fragment="script">
+    <script th:src="@{/js/search.js}"></script>
+  </th:block>
+</head>
+<div layout:fragment="main" id="main">
+  <h2> 축제검색화면 </h2>
+  <div id="festival_list"></div>
+<!--    <div class="day_festivals">-->
+<!--      <div class="fes_sinfo">-->
+<!--        <img class="fes_img" src="" alt="축제이미지">-->
+<!--        <div class="fes_name"></div>-->
+<!--        <div class="fes_start_date"></div>-->
+<!--        <div class="fes_end_date"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+  <button id="load_more_bt" class="button">▼</button>
+</div>
+</html>

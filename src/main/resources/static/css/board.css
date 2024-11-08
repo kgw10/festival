@@ -1,0 +1,78 @@
+/* board.css */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    z-index:1000;
+}
+.modal-content{
+    position:relative;
+    background-color:#fff;
+    margin:10% auto;
+    padding:20px;
+    width:60%;
+    max-width:500px;
+    border-radius:10px;
+}
+.close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    font-size:24px;
+    cursor:pointer;
+}
+.chat-area{
+    height:400px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    overflow-y:auto;
+    border:1px solid #ddd;
+    border-radius:10px;
+    margin-bottom:10px;
+    padding:10px;
+}
+.board{
+    padding:10px;
+    text-align:center;
+}
+button{
+    padding:10px 20px;
+    background-color:#007bff;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+.my-message {
+    background-color:#ffeb3b;
+    padding:10px;
+    border-radius:10px;
+    text-align:right;
+    margin-left:auto;
+    max-width:60%;
+}
+.other-message {
+    background-color:#f0f0f0;
+    padding:10px;
+    border-radius:10px;
+    text-align:left;
+    margin-right:auto;
+    max-width:60%;
+}
+.joinbt {
+    padding:10px 20px;
+    background-color:#007bff;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+    margin-left:20px;
+}
+.joined{
+    border:2px solid #007bff;
+}

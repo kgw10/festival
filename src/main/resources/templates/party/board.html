@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{fragment/main}">
+<head>
+  <title layout:fragment="title">같이가요! 게시판</title>
+  <th:block layout:fragment="css">
+    <link rel="stylesheet" th:href="@{/css/board.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+  </th:block>
+  <th:block layout:fragment="script">
+    <script th:src="@{/js/board.js}"></script>
+  </th:block>
+</head>
+<div layout:fragment="main" id="main">
+  <h2> 같이가요! 게시판 </h2>
+  <!-- 게시판 영역 -->
+  <div class="board">
+    <ul>
+      <li> <a href="#" class="post-link">게시글1</a> </li>
+      <li> <a href="#" class="post-link">게시글2</a> </li>
+      <li> <a href="#" class="post-link">게시글3</a> </li>
+    </ul>
+    <button id="createbt">게시글 만들기</button>
+  </div>
+  <!-- 대화방 영역 -->
+  <div id="chatroom" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('chatroom')">&times;</span>
+      <button id="joinbt" class="joinbt" data-board-id="1">참가하기</button>
+      <h3> 대화방 </h3>
+      <div class="chat-area">
+        <p> 대화 내용1 </p>
+        <p> 대화 내용2 </p>
+        <p> 대화 내용3 </p>
+      </div>
+      <input type="text" placeholder="메시지를 입력하세요" id="chatInput"/>
+      <button id="sendMessage">전송</button>
+    </div>
+  </div>
+  <!-- 대화방 만들기 영역 -->
+  <div id="createroom" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('createroom')">&times;</span>
+      <h3> 대화방 만들기 </h3>
+      <input type="text" id="roomTitle" placeholder="대화방 제목"/>
+      <button id="createroombt">만들기</button>
+    </div>
+  </div>
+</div>
+</html>
