@@ -2,16 +2,27 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{fragment/main}">
-<head>
-  <meta charset="UTF-8">
-  <title layout:fragment="title"></title>
 
-  <th:block layout:fragment="css"></th:block>
+<head>
+  <title layout:fragment="title">축제모아</title>
+  <th:block layout:fragment="css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+  </th:block>
   <th:block layout:fragment="script"></th:block>
 </head>
-<body>
-<div layout:fragment="main">
-
+<div layout:fragment="main" id="main">
+  <h2> 축제모아 메인 화면 </h2>
+  <div id="festival_box">
+    <div id="festival-list">
+      <div th:each="festival : ${festivals}" class="festival-card" th:onclick="|location.href='/festival/info/'+${festival.festival_id}|">
+        <img class="fes_img" th:src="${festival.firstimage != null ? festival.firstimage : 'https://via.placeholder.com/400x200'}" alt="축제 이미지">
+        <h2 th:text="${festival.title}"></h2>
+        <p><strong>시작일:</strong><span th:text="${festival.eventstartdate}"></span></p>
+        <p><strong>종료일:</strong><span th:text="${festival.eventenddate}"></span></p>
+        <p><strong>주소:</strong><span th:text="${festival.addr1}"></span></p>
+      </div>
+    </div>
+  </div>
+  <button id="load_more_bt" class="button">▼</button>
 </div>
-</body>
 </html>
